@@ -100,11 +100,11 @@ let x=document.getElementById("login");
     
 
     const list=document.getElementById("list-container");
-    const productList = [
+   const productList = [
         {
             id: 1,
             src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qwokyvfzdond2snolvzw',
-            hotelName:'PK Biryani House',
+            hotelName:'RK Biryani House',
             description:'Biryani,Maharashtrian',
             rating:'4.1',
             time:'20Min',
@@ -115,8 +115,8 @@ let x=document.getElementById("login");
     
         {
             id: 2,
-            src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qwokyvfzdond2snolvzw',
-            hotelName:'PK Biryani House',
+            src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb',
+            hotelName:'Dominos Pizza',
             description:'Biryani,Maharashtrian',
             rating:'4.1',
             time:'20Min',
@@ -127,8 +127,8 @@ let x=document.getElementById("login");
     
        {
         id: 3,
-        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qwokyvfzdond2snolvzw',
-        hotelName:'PK Biryani House',
+        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d',
+        hotelName:'McDonalds',
         description:'Biryani,Maharashtrian',
         rating:'4.1',
         time:'20Min',
@@ -139,7 +139,7 @@ let x=document.getElementById("login");
     
        {
         id: 4,
-        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qwokyvfzdond2snolvzw',
+        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ul9xzko9eliviajj2wft',
         hotelName:'PK Biryani House',
         description:'Biryani,Maharashtrian',
         rating:'4.1',
@@ -151,7 +151,7 @@ let x=document.getElementById("login");
     
     {
         id: 5,
-        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qwokyvfzdond2snolvzw',
+        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cjpw2f0xk3yprkxl8oxo',
         hotelName:'PK Biryani House',
         description:'Biryani,Maharashtrian',
         rating:'4.1',
@@ -171,13 +171,13 @@ let x=document.getElementById("login");
          const vidDiv= document.createElement('div')
          //carddiv.className = 'list-container'
     
-         vidDiv.innerHTML=`<div class="vid-list">
+         vidDiv.innerHTML=`<div class="vid-list" data-name="p-1">
          <a href="video.html">
              <img src="${src}" class="img-class" alt=""
              /></a>
          <div class="flex-div">
            <div class="vid-info">
-             <a href="">${hotelName}</a>
+             <a href="" class="title">${hotelName}</a>
              <p>${description}</p>
              <p>Mughlai,Desserts,Beverages</p>
              <div class="btns flex-div">
@@ -187,6 +187,7 @@ let x=document.getElementById("login");
              </div>
              <div class="offers">
              <p>${offer}</p>
+             
          </div>
            </div>
          </div>
@@ -194,9 +195,52 @@ let x=document.getElementById("login");
     
          list.appendChild(vidDiv)
      }
+ 
+
+
+
+    
+function searchProducts() {
+    
+    let input = document.getElementById("search-box");
+    let searchValue = input.value.toUpperCase();
+    let product = document.getElementById("list-container");
+    let card = product.querySelectorAll(".vid-list")
+    for (i = 0; i < card.length; i++) {
+      txtValue = card[i].textContent || card[i].innerText;
+      console.log(txtValue)
+      if (txtValue.toUpperCase().indexOf(searchValue) > -1) {
+        card[i].style.display = "";
+      } else {
+        card[i].style.display = "none";
+      }
+    }
+  }
+   
+
+
+
      
-    
-    
-     
-    
-    
+   /*    
+     let preveiwContainer = document.querySelector('.products-preview');
+let previewBox = preveiwContainer.querySelectorAll('.preview');
+
+document.querySelectorAll('.list-container .vid-list').forEach(product =>{
+  product.onclick = () =>{
+    preveiwContainer.style.display = 'flex';
+    let name = product.getAttribute('data-name');
+    previewBox.forEach(preview =>{
+      let target = preview.getAttribute('data-target');
+      if(name == target){
+        preview.classList.add('active');
+      }
+    });
+  };
+});
+
+previewBox.forEach(close =>{
+  close.querySelector('.fa-times').onclick = () =>{
+    close.classList.remove('active');
+    preveiwContainer.style.display = 'none';
+  };
+}); */

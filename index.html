@@ -40,10 +40,10 @@
        <a href="signup.html"> <div class="fas fa-user" id="login-btn"></div></a>
     </div>
     <form action="" class="search-form">
-        <input type="search" id="search-box" placeholder="search here...">
-        <label for="search-box" class="fas fa-search"></label>
+    <input type="search" id="search-box" placeholder="search here..." onclick="searchProducts()">
+    <label for="search-box" class="fas fa-search" id="searchBox" ></label>
     </form>
-<div class="shopping-cart">
+<div class="shopping-cart" id="shopping-cart">
     <div class="box">
         <i class="fas fa-trash"></i>
         <img src="image\cart-img-1.png" alt="">
@@ -99,18 +99,18 @@
         <a href="#">Cost:Low to High</a>
         <a href="#">Cost:Hight to Low</a>
         <a href="#">Filters</a>
+        
     </div>
 </div>
 
-<div class="list-container" id="list-container"></div>
+<div class="list-container" id="list-container">
      
-   <!--  <div class="vid-list">
-        <a href="video.html">
+      <!-- <div class="vid-list" data-name="p-1">
           <img src="image/food.webp" class="img-class" alt=""
         /></a>
         <div class="flex-div">
           <div class="vid-info">
-            <a href="">Bebe Di Rasoi-Panjabi</a>
+            <a href="">Di Rasoi-Panjabi</a>
             <p>North Indian,Panjabi,Biryani,kebabs</p>
             <p>Mughlai,Desserts,Beverages</p>
             <div class="btns flex-div">
@@ -270,6 +270,7 @@
         </div>
       </div>
 
+
       <div class="vid-list">
         <a href="video.html">
           <img src="image/blog-2.jpg" class="img-class" alt=""
@@ -295,38 +296,135 @@
 
 </div>
 
- -->
-
-
-<!-- <div class="box-container">
-    <div class="box">
-        <img src="image/feature-img-1.png" alt="">
-        <h3>fresh and organic</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, deleniti autem, fugiat minima fugit dolorum quae voluptatum nisi maiores magni necessitatibus nobis. Commodi veritatis dignissimos error at harum dolorem magnam!</p>
-        <a href="#" class="btn">read more</a>
-    </div>
-
-    <div class="box">
-        <img src="image/feature-img-2.png" alt="">
-        <h3>free delivery</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, deleniti autem, fugiat minima fugit dolorum quae voluptatum nisi maiores magni necessitatibus nobis. Commodi veritatis dignissimos error at harum dolorem magnam!</p>
-        <a href="#" class="btn">read more</a>
-    </div>
-
-    <div class="box">
-        <img src="image/feature-img-3.png" alt="">
-        <h3>easy payments</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste, deleniti autem, fugiat minima fugit dolorum quae voluptatum nisi maiores magni necessitatibus nobis. Commodi veritatis dignissimos error at harum dolorem magnam!</p>
-        <a href="#" class="btn">read more</a>
-    </div>
-
 </div>
-</section>
 
-<section class="products" id="products">
-    
-</section>
- -->
+
+
+ <div class="products-preview">
+
+    <div class="preview" data-target="p-1">
+       <i class="fas fa-times"></i>
+       <img src="image/food.webp" alt="">
+       <h3>Pizza</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="#" class="cart">add to cart</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-2">
+       <i class="fas fa-times"></i>
+       <img src="images/2.png" alt="">
+       <h3>organic onions</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="#" class="cart">add to cart</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-3">
+       <i class="fas fa-times"></i>
+       <img src="images/3.png" alt="">
+       <h3>organic tomatoes</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="#" class="cart">add to cart</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-4">
+       <i class="fas fa-times"></i>
+       <img src="images/4.png" alt="">
+       <h3>organic brinjal</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="#" class="cart">add to cart</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-5">
+       <i class="fas fa-times"></i>
+       <img src="images/5.png" alt="">
+       <h3>organic broccoli</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="#" class="cart">add to cart</a>
+       </div>
+    </div>
+ 
+    <div class="preview" data-target="p-6">
+       <i class="fas fa-times"></i>
+       <img src="images/6.png" alt="">
+       <h3>organic potatoes</h3>
+       <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+          <span>( 250 )</span>
+       </div>
+       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur, dolorem.</p>
+       <div class="price">$2.00</div>
+       <div class="buttons">
+          <a href="#" class="buy">buy now</a>
+          <a href="#" class="cart">add to cart</a>
+       </div>
+    </div>
+   -->
+ </div>
+
+
 <script src="JS\script.js"></script>
 </body>
 </html>
