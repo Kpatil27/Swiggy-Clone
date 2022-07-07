@@ -20,7 +20,7 @@
           </button>
         </div>
 
-        <form id="login" class="input-group">
+        <form id="login" class="input-group" onsubmit="loginForm(event)">
           <input
             type="email"
             class="input-field"
@@ -34,7 +34,7 @@
             placeholder="Enter your password"
           />
           <br />
-          <button type="submit" class="submit-btn" onclick="loginForm()">
+          <button type="submit" class="submit-btn" >
             Login
           </button>
         </form>
@@ -92,7 +92,8 @@
         }
       }
 
-      function loginForm() {
+      function loginForm(e) {
+        e.preventDefault();
         let email = document.getElementById("emailNew").value;
         let pwd = document.getElementById("pwdNew").value;
 
@@ -104,14 +105,7 @@
           record.some((v) => {
             return v.email == email && v.pwd == pwd;})) 
             {
-              confirm("hii")
-let a=document.createElement('a');
-a.target='_blank';
-a.href='index.html';
-if (window.confirm('Login sucessful!!'))
-{
-a.click();
-};
+              window.location.href = "index.html";
             }
         else {
           alert("Login Fail");

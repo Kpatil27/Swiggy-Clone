@@ -1,24 +1,20 @@
-let searchForm = document.querySelector('.search-form');
+let searchForm = document.querySelector(".search-form");
 
-document.querySelector('#search-btn').onclick = () =>{
-    searchForm.classList.toggle('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+document.querySelector("#search-btn").onclick = () => {
+  searchForm.classList.toggle("active");
+  shoppingCart.classList.remove("active");
+  loginForm.classList.remove("active");
+  navbar.classList.remove("active");
+};
 
+let shoppingCart = document.querySelector(".shopping-cart");
 
-}
-
-let shoppingCart = document.querySelector('.shopping-cart');
-
-document.querySelector('#cart-btn').onclick = () =>{
-    shoppingCart.classList.toggle('active');
-    searchForm.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
-
-
-}
+document.querySelector("#cart-btn").onclick = () => {
+  shoppingCart.classList.toggle("active");
+  searchForm.classList.remove("active");
+  loginForm.classList.remove("active");
+  navbar.classList.remove("active");
+};
 /* 
 let loginForm = document.querySelector('.login-form');
 
@@ -30,198 +26,324 @@ document.querySelector('#login-btn').onclick = () =>{
 
 } */
 
-let navbar = document.querySelector('.navbar');
+let navbar = document.querySelector(".navbar");
 
-document.querySelector('#menu-btn').onclick = () =>{
-    navbar.classList.toggle('active');
-    searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
-}
+document.querySelector("#menu-btn").onclick = () => {
+  navbar.classList.toggle("active");
+  searchForm.classList.remove("active");
+  shoppingCart.classList.remove("active");
+  loginForm.classList.remove("active");
+};
 
-window.onscroll = () =>{
-    searchForm.classList.remove('active');
-    shoppingCart.classList.remove('active');
-    loginForm.classList.remove('active');
-    navbar.classList.remove('active');
+window.onscroll = () => {
+  searchForm.classList.remove("active");
+  shoppingCart.classList.remove("active");
+  loginForm.classList.remove("active");
+  navbar.classList.remove("active");
+};
 
-}
+const list = document.getElementById("list-container");
+const productList = [
+  {
+    id: 1,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qwokyvfzdond2snolvzw",
+    hotelName: "RK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
 
+  {
+    id: 2,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+    hotelName: "Dominos Pizza",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
 
-/* function registration() {
-    let myName,email,pwd;
-    myName=document.getElementById("name").value;
-    email=document.getElementById("email").value;
-    pwd=document.getElementById("pwd").value;
+  {
+    id: 3,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
+    hotelName: "McDonalds",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
 
-localStorage.setItem("name",myName)
-localStorage.setItem("email",email)
-localStorage.setItem("password",pwd)
-}
+  {
+    id: 4,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ul9xzko9eliviajj2wft",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
 
+  {
+    id: 5,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cjpw2f0xk3yprkxl8oxo",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+  {
+    id: 6,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/pzg64dwsbfozjxxrjf4c",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+  {
+    id: 7,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+  {
+    id: 8,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+  {
+    id: 9,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mmnvr7hpsr2gumtkukgk",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+  {
+    id: 10,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dc5gwz7oa5gwo3l2dw7y",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+  {
+    id: 11,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ve8hjh2htgzhfyqsnhsh",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+  {
+    id: 12,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nz4ifkepwxbdsnrrm5gp",
+    hotelName: "PK Biryani House",
+    description: "Biryani,Maharashtrian",
+    rating: "4.1",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+];
+console.log(typeof id);
+function renderProdcuts() {
+  productList.forEach((product) => {
+    //const{src,hotelName,description,rating,time,amt,offer}= productList[product]
 
+    const vidDiv = document.createElement("div");
+    //carddiv.className = 'list-container'
 
-
-function loginForm()
-{
-    var email=document.getElementById("email").value;
-    var pass=document.getElementById("password").value;
-
-    var email1=localStorage.setItem("email1")
-    var pass1=localStorage.setItem("pass1");
-
-    if (email==email1 && pass==pass1)
-    {
-        window.location.href="index.html"
-    }
-    else{
-        alert ("Email and password is incorrect")
-    }
-}
-
-let x=document.getElementById("login");
-    let y=document.getElementById("register")
-    let z=document.getElementById("btn");
-
-    function register()
-    {
-        x.style.left="-400px";
-        y.style.left="50px";
-        z.style.left="110px";
-    }
-
-
-    function login()
-    {
-        x.style.left="50px";
-        y.style.left="450px";
-        z.style.left="0";
-    } */
-    
-
-    const list=document.getElementById("list-container");
-   const productList = [
-        {
-            id: 1,
-            src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qwokyvfzdond2snolvzw',
-            hotelName:'RK Biryani House',
-            description:'Biryani,Maharashtrian',
-            rating:'4.1',
-            time:'20Min',
-            amt: 'Rs.350',
-            offer:'50% Off| use WELCOME50',
-        
-        },
-    
-        {
-            id: 2,
-            src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb',
-            hotelName:'Dominos Pizza',
-            description:'Biryani,Maharashtrian',
-            rating:'4.1',
-            time:'20Min',
-            amt: 'Rs.350',
-            offer:'50% Off| use WELCOME50',
-        
-       },
-    
-       {
-        id: 3,
-        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d',
-        hotelName:'McDonalds',
-        description:'Biryani,Maharashtrian',
-        rating:'4.1',
-        time:'20Min',
-        amt: 'Rs.350',
-        offer:'50% Off| use WELCOME50',
-    
-       },
-    
-       {
-        id: 4,
-        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ul9xzko9eliviajj2wft',
-        hotelName:'PK Biryani House',
-        description:'Biryani,Maharashtrian',
-        rating:'4.1',
-        time:'20Min',
-        amt: 'Rs.350',
-        offer:'50% Off| use WELCOME50',
-    
-    },
-    
-    {
-        id: 5,
-        src:'https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cjpw2f0xk3yprkxl8oxo',
-        hotelName:'PK Biryani House',
-        description:'Biryani,Maharashtrian',
-        rating:'4.1',
-        time:'20Min',
-        amt: 'Rs.350',
-        offer:'50% Off| use WELCOME50',
-    
-    },
-    
-    ]
-    console.log(typeof(id));
-    
-     for(let item=0;item<productList.length;item++)
-     {
-         const{src,hotelName,description,rating,time,amt,offer}= productList[item]
-    
-         const vidDiv= document.createElement('div')
-         //carddiv.className = 'list-container'
-    
-         vidDiv.innerHTML=`<div class="vid-list" data-name="p-1">
-         <a href="video.html">
-             <img src="${src}" class="img-class" alt=""
+    vidDiv.innerHTML = `<div class="vid-list" data-name="p-1">
+             <img src="${product.src}" class="img-class" alt=""
              /></a>
          <div class="flex-div">
            <div class="vid-info">
-             <a href="" class="title">${hotelName}</a>
-             <p>${description}</p>
+             <a href="" class="title">${product.hotelName}</a>
+             <p>${product.description}</p>
              <p>Mughlai,Desserts,Beverages</p>
              <div class="btns flex-div">
-                 <div class="rating">${rating}</div> 
-                 <div class="time">${time}</div> 
-                 <div class="amt">${amt}</div>
+                 <div class="rating">${product.rating}</div> 
+                 <div class="time">${product.time}</div> 
+                 <div class="amt">RS.${product.amt}</div>
              </div>
              <div class="offers">
-             <p>${offer}</p>
-             
+             <p>${product.offer}</p>
+             <button id="add" onclick="addToCart(${product.id})">Add to cart</button>
          </div>
            </div>
          </div>
-       </div>`
-    
-         list.appendChild(vidDiv)
-     }
- 
+       </div>`;
 
+    list.appendChild(vidDiv);
+  });
+}
 
+renderProdcuts();
 
-    
-function searchProducts() {
-    
-    let input = document.getElementById("search-box");
-    let searchValue = input.value.toUpperCase();
-    let product = document.getElementById("list-container");
-    let card = product.querySelectorAll(".vid-list")
-    for (i = 0; i < card.length; i++) {
-      txtValue = card[i].textContent || card[i].innerText;
-      console.log(txtValue)
-      if (txtValue.toUpperCase().indexOf(searchValue) > -1) {
-        card[i].style.display = "";
-      } else {
-        card[i].style.display = "none";
+const cartItemsEl = document.querySelector(".box"); // box
+const subtotalEl = document.querySelector(".subtotal");
+const totalItemsInCartEl = document.querySelector(".total-items-in-cart");
+
+const cartItem = document.getElementById("shopping-cart");
+
+let cart = JSON.parse(localStorage.getItem("CART")) || [];
+updateCart();
+
+// ADD TO CART
+function addToCart(id) {
+  // check if prodcut already exist in cart
+  if (cart.some((item) => item.id === id)) {
+    changeNumberOfUnits("plus", id);
+  } else {
+    const item = productList.find((product) => product.id === id);
+    console.log(item);
+    cart.push({
+      ...item,
+      numberOfUnits: 1,
+    });
+  }
+
+  updateCart();
+}
+
+// update cart
+function updateCart() {
+  renderCartItems();
+  renderSubtotal();
+
+  // save cart to local storage
+  localStorage.setItem("CART", JSON.stringify(cart));
+}
+
+// calculate and render subtotal
+function renderSubtotal() {
+  let totalPrice = 0,
+    totalItems = 0;
+
+  cart.forEach((item) => {
+    totalPrice += item.amt * item.numberOfUnits;
+    totalItems += item.numberOfUnits;
+  });
+
+  subtotalEl.innerHTML = `Total (${totalItems} items): $${totalPrice}`;
+  totalItemsInCartEl.innerHTML = totalItems;
+}
+
+function renderCartItems() {
+  cartItemsEl.innerHTML = ""; // clear cart element
+  cart.forEach((item) => {
+    cartItemsEl.innerHTML += `<table>
+        <tr>
+          <th>Item</th>
+          <th>Description</th>
+          <th>Quantity</th>
+          <th>Remove</th>
+        </tr>
+        <tr>
+          <td><div class="img"><img src="${item.src}" alt=""></div></td>
+          <td><div class="cart-content">
+                <div class="des">
+                        ${item.description}
+                    </div>
+                    <span class="price">Amount:Rs.${item.amt}</span></div>
+                 </td>
+          <td><div class="units">
+                    <div class="btn minus" onclick="changeNumberOfUnits('minus', ${item.id})">-</div>
+                    <div class="number">${item.numberOfUnits}</div>
+                    <div class="btn plus" onclick="changeNumberOfUnits('plus', ${item.id})">+</div>           
+                </div></td>
+                <td><i class="fas fa-trash" onclick="removeItemFromCart(${item.id})"></i></td>
+        </tr>
+        </table>
+        
+        `;
+  });
+}
+
+// remove item from cart
+function removeItemFromCart(id) {
+  cart = cart.filter((item) => item.id !== id);
+
+  updateCart();
+}
+
+// change number of units for an item
+function changeNumberOfUnits(action, id) {
+  cart = cart.map((item) => {
+    let numberOfUnits = item.numberOfUnits;
+
+    if (item.id === id) {
+      if (action === "minus" && numberOfUnits > 1) {
+        numberOfUnits--;
+      } else if (action === "plus") {
+        numberOfUnits++;
       }
     }
+
+    return {
+      ...item,
+      numberOfUnits,
+    };
+  });
+
+  updateCart();
+}
+/* 
+ function searchProducts() {
+  let input = document.getElementById("search-box");
+  let searchValue = input.value.toUpperCase();
+  let product = document.getElementById("list-container");
+  //product.innerHTML="";
+
+  let card = product.querySelectorAll(".vid-list");
+
+  for (i = 0; i < card.length; i++) {
+    txtValue = card[i].textContent || card[i].innerText;
+    console.log(txtValue);
+    if (txtValue.toUpperCase().indexOf(searchValue) > -1) {
+      card[i].style.display = "block";
+    } else {
+      card[i].style.display = "none";
+    }
   }
-   
+}  */
+//searchProducts();
+
+//
+
+const search=docum
 
 
 
+
+
+
+/* 
      
-   /*    
      let preveiwContainer = document.querySelector('.products-preview');
 let previewBox = preveiwContainer.querySelectorAll('.preview');
 
@@ -243,4 +365,11 @@ previewBox.forEach(close =>{
     close.classList.remove('active');
     preveiwContainer.style.display = 'none';
   };
-}); */
+}); 
+
+
+
+
+
+
+ */
