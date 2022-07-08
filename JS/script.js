@@ -175,6 +175,7 @@ function renderProdcuts() {
     //const{src,hotelName,description,rating,time,amt,offer}= productList[product]
 
     const vidDiv = document.createElement("div");
+    vidDiv.className='cardDiv';
     //carddiv.className = 'list-container'
 
     vidDiv.innerHTML = `<div class="vid-list" data-name="p-1">
@@ -312,30 +313,44 @@ function changeNumberOfUnits(action, id) {
 
   updateCart();
 }
-/* 
+
  function searchProducts() {
   let input = document.getElementById("search-box");
   let searchValue = input.value.toUpperCase();
   let product = document.getElementById("list-container");
   //product.innerHTML="";
-
   let card = product.querySelectorAll(".vid-list");
+  let vidDiv=document.getElementsByClassName('cardDiv');
 
   for (i = 0; i < card.length; i++) {
     txtValue = card[i].textContent || card[i].innerText;
     console.log(txtValue);
     if (txtValue.toUpperCase().indexOf(searchValue) > -1) {
-      card[i].style.display = "block";
+      vidDiv[i].style.display = "block";
     } else {
-      card[i].style.display = "none";
+      vidDiv[i].style.display = "none";
     }
   }
-}  */
+}   
 //searchProducts();
 
 //
+//const search = ['Dominos Pizza']
+/* function searchProducts()
+{
+let input = document.getElementById("search-box");
+let searchValue = input.value.toUpperCase();
+/* let card = product.querySelectorAll(".vid-list");
+let vidDiv=document.getElementsByClassName('cardDiv');
+ 
+const searchList = productList.filter((item) => {
+  return searchValue.includes(item.hotelName);
+});
+console.log("search",searchList);
+}
+ 
+*/
 
-const search=docum
 
 
 
