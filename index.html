@@ -42,16 +42,13 @@
         
        <a href="signup.html"> <div class="fas fa-user" id="login-btn"></div></a>
     </div>
-    <form action="" class="search-form">
-    <input type="search" id="search-box" placeholder="search here..." onclick="searchProducts()">
-    <label for="search-box" class="fas fa-search" id="searchBox" ></label>
-    </form>
+    
 <div class="shopping-cart" id="shopping-cart">
     <div class="box"></div> 
     <div class=" total subtotal">
       Total (0 items): $0
   </div>
-  <div class="checkout btn" ><a href="index.html">Checkout</a>
+  <div class="checkout btn" ><a href="public\index.html">Checkout</a>
       
 </div>
 </div>
@@ -79,7 +76,12 @@
 </section>
 <section class="features" id="features">
     <div class="filter">
-    <div class="filterLeft">1282 resturants</div>
+    <div class="filterLeft">
+      <div class="search-box">
+        <input type="search" id="search-box" placeholder="search here..." onclick="searchProducts()">
+        <label for="search-box" class="fas fa-search" id="searchBox" ></label>
+      </div>
+    </div>
     <div class="filterRight ">
         <a href="#">Relevance</a>
         <a href="#">Delivery Time</a>

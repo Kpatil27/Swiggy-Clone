@@ -59,7 +59,7 @@ body {
     color:var(--orange);
 }
 
-.header .icons div {
+.header .icons #cart-btn {
     height:4.5rem;
     width:8rem;
     line-height: 4.5rem;
@@ -70,6 +70,19 @@ body {
     margin-left:.3rem;
     text-align:center;
 } 
+
+.header .icons #login-btn {
+    height:4.5rem;
+    width:8rem;
+    line-height: 4.5rem;
+    border-radius:.5rem;
+    background: #eee;
+    color: var(--black);
+    font-size: 2rem;
+    margin-left:.8rem;
+    text-align:center;
+} 
+
 
 .icons #cart-btn {
     position: relative;
@@ -92,17 +105,20 @@ body {
 }
 
 .header .icons .num-icon {
-    top:5px;
-    right:215px;
-    background: transparent;
+    top:10px;
+    right:220px;
+    background: orange;
     position: absolute;
     border-radius: 50%;
     width:25px;
-    height: 15px;
-    padding-bottom: 100px;
+    height: 25px;
+    line-height: 25px;
     text-align: center;
     outline: none;
+    font-weight: bold;
+    font-size: 15px;
 }
+
 
 
 .header .icons .num-icon:hover {
@@ -425,11 +441,48 @@ section {
     padding-bottom: 10px;
 }
  .filterLeft {
+    
     display: flex;
     flex:2;
+    width: 100%;
     font-size: 28px;
     align-items: flex-end;
     justify-content: center;
+}
+.filterLeft .search-box
+{
+    box-shadow: 0 5px 10px rgba(0,0,0,0.25);
+/*     border-radius: 25px;
+ */
+    position: relative;
+    height:40px;
+    width: 380px;
+    
+}
+
+.filterLeft .search-box input{
+    position: absolute;
+    height: 100%;
+    width:100%;
+    /* border-radius: 25px; */
+    background-color:transparent;
+    outline: none;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+}
+.search-box #searchBox {
+    position: absolute;
+    right:1px;
+    top:0px;
+    width:50px;
+    background:#ff7800;
+    height: 100%;
+    /* border-radius: 25px; */
+    text-align: center;
+    line-height: 40px;
+    color: #fff;
+    font-size: 20px;
 }
 .filterRight   {
     display: flex;
@@ -596,15 +649,20 @@ a {
 .vid-list {
     width:250px;
     padding: 2px;
+    outline: .2rem solid transparent;
+
     /* margin-right: 50px; */
     
+}
+#search-btn {
+    display: none;
 }
 
 .vid-list:hover {
     outline-offset: none;
     outline: .2rem solid silver;
-    padding: 3px;
-}
+/*     padding: 3px;
+ */}
 
 .vid-list .img-class {
     width:100%;

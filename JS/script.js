@@ -193,7 +193,7 @@ function renderProdcuts() {
              </div>
              <div class="offers">
              <p>${product.offer}</p>
-             <button id="add" onclick="addToCart(${product.id})">Add to cart</button>
+             <button id="add" class="button" onclick="addToCart(${product.id})">Add to cart</button>
          </div>
            </div>
          </div>
@@ -204,6 +204,10 @@ function renderProdcuts() {
 }
 
 renderProdcuts();
+let btnAdd=document.querySelector('button');
+btnAdd.addEventListener('click', ()=>{
+  btnAdd.innerText="Go To cart";
+});
 
 const cartItemsEl = document.querySelector(".box"); // box
 const subtotalEl = document.querySelector(".subtotal");
@@ -313,6 +317,8 @@ function changeNumberOfUnits(action, id) {
 
   updateCart();
 }
+
+
 
  function searchProducts() {
   let input = document.getElementById("search-box");
