@@ -10,10 +10,18 @@ var options = {
     "currency": "INR",
     "name": "Swiggy",
     "description": "Test Transaction",
-    "image": "logo.png",
+    "image": "image/newlogo.png",
     //"order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
         saveDB(response)
+        let a=document.createElement('a');
+        a.target='_blank';
+        a.href='C:/Users/kanas/OneDrive/Desktop/Swiggy/index.html';
+        if (window.confirm('Order sucessful!!'))
+        {
+        a.click();
+        };
+
     },
     "prefill": {
         "name": "Kanasvi Patil",
@@ -35,7 +43,7 @@ function saveDB(response) {
     console.log(response)
     var payRef = firebase.database().ref('payment');
 
-   /*  payRef.child('123456789').set({
+    payRef.child('123456789').set({
     payment_id : response.razorpay_payment_id
-    }) */ 
+    }) 
 }
