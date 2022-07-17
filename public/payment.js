@@ -14,14 +14,15 @@ var options = {
     //"order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
         saveDB(response)
-        let a=document.createElement('a');
+        $('#myModal').modal();
+        /* let a=document.createElement('a');
         a.target='_blank';
         a.href='C:/Users/kanas/OneDrive/Desktop/Swiggy/index.html';
         if (window.confirm('Order sucessful!!'))
         {
         a.click();
         };
-
+ */
     },
     "prefill": {
         "name": "Kanasvi Patil",
