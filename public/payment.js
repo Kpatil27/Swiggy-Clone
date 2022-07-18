@@ -5,24 +5,15 @@ function hi()
 function payment(){
     console.log("hi")
 var options = {
-    "key": "rzp_test_7pnPg5CWEOYOE4", // Enter the Key ID generated from the Dashboard
+    "key": "rzp_test_s95g3UKovO2ZXe", // Enter the Key ID generated from the Dashboard
     "amount": 320*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     "currency": "INR",
     "name": "Swiggy",
     "description": "Test Transaction",
     "image": "image/newlogo.png",
-    //"order_id": "order_9A33XWu170gUtm", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
+    //"order_id": "order_Juq2tzkn1kVVrY", //This is a sample Order ID. Pass the `id` obtained in the response of Step 1
     "handler": function (response){
         saveDB(response)
-        $('#myModal').modal();
-        /* let a=document.createElement('a');
-        a.target='_blank';
-        a.href='C:/Users/kanas/OneDrive/Desktop/Swiggy/index.html';
-        if (window.confirm('Order sucessful!!'))
-        {
-        a.click();
-        };
- */
     },
     "prefill": {
         "name": "Kanasvi Patil",
@@ -36,6 +27,7 @@ var options = {
         "color": "#ff7800"
     }
 };
+console.log(options)
 var propay = new Razorpay(options);
     propay.open();
 }

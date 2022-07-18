@@ -187,7 +187,8 @@ function renderProdcuts() {
              <p>${product.description}</p>
              <p>Mughlai,Desserts,Beverages</p>
              <div class="btns flex-div">
-                 <div class="rating">${product.rating}</div> 
+                
+                 <div class="rating"> <span class="fas fa-star">${product.rating}</span> </div> 
                  <div class="time">${product.time}</div> 
                  <div class="amt">RS.${product.amt}</div>
              </div>
@@ -254,7 +255,7 @@ function renderSubtotal() {
     totalItems += item.numberOfUnits;
   });
 
-  subtotalEl.innerHTML = `Total (${totalItems} items): $${totalPrice}`;
+  subtotalEl.innerHTML = `Total (${totalItems} items): INR ${totalPrice}`;
   totalItemsInCartEl.innerHTML = totalItems;
 }
 
