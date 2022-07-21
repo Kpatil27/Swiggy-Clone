@@ -15,7 +15,7 @@ document.querySelector("#cart-btn").onclick = () => {
   loginForm.classList.remove("active");
   navbar.classList.remove("active");
 };
-/* 
+ 
 let loginForm = document.querySelector('.login-form');
 
 document.querySelector('#login-btn').onclick = () =>{
@@ -24,7 +24,7 @@ document.querySelector('#login-btn').onclick = () =>{
     shoppingCart.classList.remove('active');
     navbar.classList.remove('active');
 
-} */
+} 
 
 let navbar = document.querySelector(".navbar");
 
@@ -47,7 +47,7 @@ const productList = [
   {
     id: 1,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/qwokyvfzdond2snolvzw",
-    hotelName: "RK Biryani House",
+    hotelName: "Bebe di Rasai",
     description: "Biryani,Maharashtrian",
     rating: "4.1",
     time: "20Min",
@@ -58,9 +58,9 @@ const productList = [
   {
     id: 2,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
-    hotelName: "Dominos Pizza",
-    description: "Biryani,Maharashtrian",
-    rating: "4.1",
+    hotelName: "Oven Story",
+    description: "The Standout Pizza",
+    rating: "4.2",
     time: "20Min",
     amt: "350",
     offer: "50% Off| use WELCOME50",
@@ -70,7 +70,7 @@ const productList = [
     id: 3,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/piohreuutzllhqkzf79d",
     hotelName: "McDonalds",
-    description: "Biryani,Maharashtrian",
+    description: "Burger,Fries...",
     rating: "4.1",
     time: "20Min",
     amt: "350",
@@ -80,10 +80,10 @@ const productList = [
   {
     id: 4,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ul9xzko9eliviajj2wft",
-    hotelName: "PK Biryani House",
-    description: "Biryani,Maharashtrian",
+    hotelName: "South House",
+    description: "South Indian Foods",
     rating: "4.1",
-    time: "20Min",
+    time: "50Min",
     amt: "350",
     offer: "50% Off| use WELCOME50",
   },
@@ -91,8 +91,8 @@ const productList = [
   {
     id: 5,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cjpw2f0xk3yprkxl8oxo",
-    hotelName: "PK Biryani House",
-    description: "Biryani,Maharashtrian",
+    hotelName: "MadOver Donuts",
+    description: "Donuts",
     rating: "4.1",
     time: "20Min",
     amt: "350",
@@ -111,8 +111,8 @@ const productList = [
   {
     id: 7,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/cgf7qsoqsvfwletamxt4",
-    hotelName: "PK Biryani House",
-    description: "Biryani,Maharashtrian",
+    hotelName: "PavBhaji Center",
+    description: "PavBhaji",
     rating: "4.1",
     time: "20Min",
     amt: "350",
@@ -121,8 +121,8 @@ const productList = [
   {
     id: 8,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/rndbbuntatuzxhyxdq8q",
-    hotelName: "PK Biryani House",
-    description: "Biryani,Maharashtrian",
+    hotelName: "Rolls Mania",
+    description: "Paneer Roll,Veg Roll",
     rating: "4.1",
     time: "20Min",
     amt: "350",
@@ -131,8 +131,8 @@ const productList = [
   {
     id: 9,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/mmnvr7hpsr2gumtkukgk",
-    hotelName: "PK Biryani House",
-    description: "Biryani,Maharashtrian",
+    hotelName: "Burger King",
+    description: "Burgers",
     rating: "4.1",
     time: "20Min",
     amt: "350",
@@ -141,8 +141,8 @@ const productList = [
   {
     id: 10,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dc5gwz7oa5gwo3l2dw7y",
-    hotelName: "PK Biryani House",
-    description: "Biryani,Maharashtrian",
+    hotelName: "Veg World",
+    description: "Veg Thali",
     rating: "4.1",
     time: "20Min",
     amt: "350",
@@ -151,8 +151,8 @@ const productList = [
   {
     id: 11,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/ve8hjh2htgzhfyqsnhsh",
-    hotelName: "PK Biryani House",
-    description: "Biryani,Maharashtrian",
+    hotelName: "Cake House",
+    description: "Cakes",
     rating: "4.1",
     time: "20Min",
     amt: "350",
@@ -161,13 +161,24 @@ const productList = [
   {
     id: 12,
     src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/nz4ifkepwxbdsnrrm5gp",
-    hotelName: "PK Biryani House",
-    description: "Biryani,Maharashtrian",
+    hotelName: "Party House",
+    description: "Cakes and lot more",
     rating: "4.1",
     time: "20Min",
     amt: "350",
     offer: "50% Off| use WELCOME50",
   },
+  {
+    id: 12,
+    src: "https://res.cloudinary.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_508,h_320,c_fill/dmglrqh8j4mxemsdejsb",
+    hotelName: "Oven Story",
+    description: "The Standout Pizza",
+    rating: "4.2",
+    time: "20Min",
+    amt: "350",
+    offer: "50% Off| use WELCOME50",
+  },
+
 ];
 console.log(typeof id);
 function renderProdcuts() {
@@ -185,7 +196,7 @@ function renderProdcuts() {
            <div class="vid-info">
              <a href="" class="title">${product.hotelName}</a>
              <p>${product.description}</p>
-             <p>Mughlai,Desserts,Beverages</p>
+             <p>Desserts,Beverages and lot more...</p>
              <div class="btns flex-div">
                 
                  <div class="rating"> <span class="fas fa-star">${product.rating}</span> </div> 

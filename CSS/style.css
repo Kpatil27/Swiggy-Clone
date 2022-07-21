@@ -71,6 +71,16 @@ body {
     text-align:center;
 } 
 
+.header .icons #cart-btn:hover {
+    background: var(--orange);
+    color: #fff;
+} 
+
+.header .icons #login-btn:hover {
+    background: var(--orange);
+    color: #fff;
+} 
+
 .header .icons #login-btn {
     height:4.5rem;
     width:8rem;
@@ -103,6 +113,7 @@ body {
 #add:hover {
     background: var(--orange);
     color:#fff;
+    border:.2rem solid white;
 }
 
 .header .icons .num-icon {
@@ -486,7 +497,6 @@ section {
 .filterRight   {
     display: flex;
     flex:8;
-    
     justify-content: flex-end;
     gap:45px;
 
@@ -583,7 +593,7 @@ section {
         justify-content: space-between;
         padding:3rem 3%;
         height:80px;
-        background:palevioletred;
+        /* background:palevioletred; */
         
     }
     .header .icons .num-icon {
@@ -932,10 +942,7 @@ a {
 .vid-list {
     width:100%;
     padding: 2px;
-    border: .2rem solid transparent;
-
-    /* margin-right: 50px; */
-    
+    border: .2rem solid transparent;    
 }
 #search-btn {
     display: none;
@@ -994,12 +1001,14 @@ a {
 } 
 
 .btns .rating {
-    width:60px;
-    padding: 5px;
+    display: flex;
+    align-items: center;
+    width:43px;
+    padding:0 5px;
     height: 20px;
     color: #fff;
-    background: green;
-    
+    background: #48c479;
+    font-weight:400;
 }
  .fa-star:before {
     content: "\f005";
