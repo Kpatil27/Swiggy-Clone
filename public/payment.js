@@ -5,7 +5,7 @@ function hi()
 function payment(){
     console.log("hi")
 var options = {
-    "key": "You API Key", // Enter the Key ID generated from the Dashboard
+    "key": "rzp_test_s95g3UKovO2ZXe", // Enter the Key ID generated from the Dashboard
     "amount": 350*100, // Amount is in currency subunits. Default currency is INR. Hence, 50000 refers to 50000 paise
     "currency": "INR",
     "name": "Swiggy",
